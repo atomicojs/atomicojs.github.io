@@ -1,6 +1,8 @@
 import { h, Props, c, useEffect, useState } from "atomico";
 import style from "./doc-bundlephobia.css";
 
+type Pkg = [string, { gzip: number; size: number }];
+
 const cache = {};
 
 const request = (url) =>
@@ -13,8 +15,11 @@ const mergePackage = ([pkg, ...packages]) =>
         return pkg;
     }, pkg);
 
-function useBundlephobia(packages: string[]): [string, any][] {
-    const [state, setState] = useState([]);
+function useBundlephobia(packages: string[]): Pkg[] {
+    const [state, setState] = useState<Pkg[]>(() =>
+        packages.map((name) => [name, { gzip: 0, size: 0 }])
+    );
+
     const api = "https://bundlephobia.com/api/size?package=";
 
     useEffect(() => {
