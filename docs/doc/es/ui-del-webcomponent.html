@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/1948-style.css">
+    <script type="module" src="/assets/4319-doc-menu.js" ></script><script type="module" src="/assets/5577-doc-list-links.js" ></script><script type="module" src="/assets/5371-doc-list-link.js" ></script><script type="module" src="/assets/5581-doc-list-topic.js" ></script><script type="module" src="/assets/5343-doc-next-page.js" ></script><script type="module" src="/assets/4297-doc-tabs.js" ></script><script type="module" src="/assets/4953-doc-details.js" ></script><script type="module" src="/assets/6031-doc-bundlephobia.js" ></script>
+</head>
+<body>
+    
+    
+    <main class="o-doc">
+        <section class="o-doc_content">
+            <aside class="o-doc_aside">
+                
+                
+                
+                
+                
+                
+                
+                
+                <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
+                    
+                            <a slot="header" href="/doc/es">
+                                <img  src="/assets/2062-logo.svg" alt="">
+                            </a>
+                    
+                    <div slot="langs">
+                        Español - Ingles
+                    </div>
+                    
+                        <doc-list-links slot="links-1" label="Component">
+                            
+                            
+                                <a href="/doc/es/inicio-rapido" is="doc-list-link" ><span slot>Introducción</span></a>
+                            
+                                <a href="/doc/es/ui-del-webcomponent" is="doc-list-link"  active ><span slot>Interfaz de usuario</span></a>
+                            
+                                <a href="/doc/es/propiedades-del-webcomponent" is="doc-list-link" ><span slot>props(Propiedades)</span></a>
+                            
+                        </doc-list-links>
+                    
+                        <doc-list-links slot="links-2" label="Hooks">
+                            
+                            
+                                <a href="/doc/es/hooks" is="doc-list-link" ><span slot>Introducción</span></a>
+                            
+                        </doc-list-links>
+                    
+                        <doc-list-links slot="links-3" label="Guías">
+                            
+                            
+                                <a href="/doc/es/shadow-dom" is="doc-list-link" ><span slot>Shadow DOM</span></a>
+                            
+                                <a href="/doc/es/light-dom" is="doc-list-link" ><span slot>Light DOM</span></a>
+                            
+                        </doc-list-links>
+                    
+
+                    <div slot="footer" class="o-doc_menuFooter">
+                        <a href="#">
+                            <img width="20px" src="/assets/3306-icon-github.svg" alt="Icon Github">
+                        </a>
+                        <a href="#">
+                            <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
+                        </a>
+                        <select onchange="location.href=event.target.value">
+                            
+                                <option value="/doc" >English</option>
+                            
+                                <option value="/doc/es"  selected >Español</option>
+                            
+                        </select>
+                    </div>
+                </doc-menu>
+            </aside>
+            <article class="o-doc_inner">
+                <header class="o-doc_header">
+                    <h1 class="o-doc_title">Virtual Dom</h1>
+                    <p class="o-doc_subtitle">Diseñado para ser simple y expresivo con la UI</p>
+                </header>
+                <div class="o-doc_md">
+                    <p>La UI del webcomponent se crea con Virtual DOM, este puede ser declarado mediante JSX o Template String, ejemplo:</p>
+<doc-tabs auto-height tabs="JSX, Template String">
+
+<pre class="markdown-code-container" data-code="jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> h <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"atomico"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> src <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>host</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Soy un titulo</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>src<span class="token punctuation">}</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>imagen<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+            </span><span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span><span class="token plain-text">Texto </span><span class="token punctuation">{</span>value<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+            <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>host</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><pre class="markdown-code-container" data-code="js"><code class="language-js"><span class="token keyword">import</span> html <span class="token keyword">from</span> <span class="token string">"atomico/html"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> src <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+        &lt;host>
+            &lt;h1>Soy un titulo&lt;/h1>
+            &lt;img src=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>src<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> alt="imagen" />
+            </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=></span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;span>Texto </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+        &lt;/host>
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></doc-tabs>
+
+<p><strong>Es un requisito para el compilador de JSX configurar e importar siempre funcion <code>h</code></strong></p>
+<doc-details summary="Configuracion para el uso de JSX con Babel">
+
+<pre class="markdown-code-container" data-code="json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">[</span>
+            <span class="token string">"@babel/plugin-transform-react-jsx"</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"pragma"</span><span class="token operator">:</span> <span class="token string">"h"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre></doc-details>
+
+<doc-details summary="Configuracion para el uso de JSX con Typesript">
+
+<pre class="markdown-code-container" data-code="json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        ...
+        <span class="token property">"jsx"</span><span class="token operator">:</span> <span class="token string">"preserve"</span><span class="token punctuation">,</span>
+        <span class="token property">"jsxFactory"</span><span class="token operator">:</span> <span class="token string">"h"</span><span class="token punctuation">,</span>
+        ...
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></doc-details>
+
+<h2 id="operadores-logicos-soportados">Operadores logicos soportados</h2><p>los operadores soportados para condicionar nodos o valores son:</p>
+<ol>
+<li><strong>corto circuitos</strong> : <code>value &amp;&amp; &lt;div/&gt;</code>.</li>
+<li><strong>Ternarios</strong> : <code>value ? &lt;div/&gt; : &lt;img/&gt;</code>.</li>
+</ol>
+<doc-tabs auto-height tabs="JSX, Template String">
+
+<pre class="markdown-code-container" data-code="jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> value <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>host</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value <span class="token operator">?</span> <span class="token string">"color:red"</span> <span class="token operator">:</span> <span class="token string">"color:black"</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token punctuation">{</span>value <span class="token operator">&amp;&amp;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">with value</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token punctuation">{</span>value <span class="token operator">?</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">with value</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span> <span class="token operator">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span><span class="token plain-text">without value</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token punctuation">}</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>host</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><pre class="markdown-code-container" data-code="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> value <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;host style=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value <span class="token operator">?</span> <span class="token string">"color:red"</span> <span class="token operator">:</span> <span class="token string">"color:black"</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">>
+        </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value <span class="token operator">&amp;&amp;</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;button>with value&lt;/button></span><span class="token template-punctuation string">`</span></span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+        &lt;!--ternario-->
+        </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value
+            <span class="token operator">?</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;button>with value&lt;/button></span><span class="token template-punctuation string">`</span></span>
+            <span class="token operator">:</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;span>without value&lt;/span></span><span class="token template-punctuation string">`</span></span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+    &lt;/host></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></doc-tabs>
+
+<h2 id="listas-simples-y-listas-con-key">Listas simples y listas con key</h2><p>Las listas pueden ser simples o asociativas a una referencia declarada mediante la propiedad key, ejemplo:</p>
+<h3 id="listas-simples">Listas simples</h3><doc-tabs auto-height tabs="JSX, Template String">
+
+<pre class="markdown-code-container" data-code="jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> users <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>host</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">Users:</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token punctuation">{</span>list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">User </span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+                <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>host</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><pre class="markdown-code-container" data-code="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> users <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+        &lt;host>
+            &lt;ul>
+                &lt;li>Users:&lt;/li>
+                </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=></span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li>User </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>user<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+            &lt;/ul>
+        &lt;/host>
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></doc-tabs>
+
+<h3 id="listas-con-key">Listas con key</h3><p>El uso de la propiedad <code>key</code> habilitá el uso de mapas de referencia para optimiza la eliminacion, recuperación y reordenamiento de nodos.</p>
+<doc-tabs auto-height tabs="JSX, Template String">
+
+<pre class="markdown-code-container" data-code="jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> users <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>host</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>header<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">Users:</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token punctuation">{</span>list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>id<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">User </span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+                <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>host</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><pre class="markdown-code-container" data-code="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> users <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+        &lt;host>
+            &lt;ul>
+                &lt;li key="header">Users:&lt;/li>
+                </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>list<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
+                    <span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=></span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li key=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>user<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">>User </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>user<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span>
+                <span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+            &lt;/ul>
+        &lt;/host>
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></doc-tabs>
+<br>
+<doc-details summary="Reglas de listas con key">
+
+<ol>
+<li>Todos los nodos de la lista debera declarar la propiedad key.</li>
+<li>Todo valor de la propiedad key debe ser distinta entre los nodos de la lista.</li>
+<li>El valor para la propiedad key debe ser distinto a null || undefined.</li>
+</ol>
+</doc-details>
+
+<h2 id="manejo-de-eventos">Manejo de eventos</h2><p>Los eventos son definidos sin forzar los cambios de mayúsculas a minúsculas por lo que <code>onClick != onclick</code>, para asociar un evento al Dom se deben cumplir 2 condiciones :</p>
+<ol>
+<li>El evento debe comenzar con el prefijo <code>on</code></li>
+<li>El valor del evento debe ser del tipo función.</li>
+</ol>
+<doc-tabs tabs="JSX, Template String">
+
+<pre class="markdown-code-container" data-code="jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">handler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"click!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>host</span> <span class="token attr-name">onclick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handler<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><pre class="markdown-code-container" data-code="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">handler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"click!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;host onclick=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>handler<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> /></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></doc-tabs>
+
+<h2 id="propiedades-y-atributos">Propiedades y Atributos</h2><p>Atomico verifica en el siguiente orden <code>Propiedad || Atributo</code>, el comportamiento de este varia en:</p>
+<ol>
+<li><strong>Propiedad</strong>: Se asocia cuando el nodo posee el uso de esta en su instancia, ejemplo el <code>input.value</code>.</li>
+<li><strong>Atributo</strong>: Se asocia cuando no se cumple la propiedad o método, si del atributo es del tipo objeto será transformado mediante <code>JSON.stringify</code>.</li>
+</ol>
+
+                </div>
+            </article>
+            <div class="o-doc_topic">
+                <doc-list-topic label="Contenidos" selector=".o-doc_md" sticky="5rem"></doc-list-topic>
+            </div>
+        </section>
+        <footer class="o-doc_footer">
+            <div class="o-doc_pagination">
+                <div class="o-doc_paginationMax">
+                    
+                        <doc-next-page label-dir="Anterior" href="/doc/es/inicio-rapido" label="Introducción" description="Diseñado  para simplificar la creación de webcomponents"></doc-next-page>
+                    
+                    
+                        <doc-next-page label-dir="Siguiente" href="/doc/es/propiedades-del-webcomponent" label="props(Propiedades)" description="Estados visibles del webcomponent como atributo o propiedad."></doc-next-page>
+                    
+                </div>
+            </div>
+            <div class="o-doc_footerEnd">
+                <img src="/assets/2684-logo-white.svg" alt="">
+            </div>
+        </footer>
+    </main>
+    <!--footer-->
+</body>
+</html>

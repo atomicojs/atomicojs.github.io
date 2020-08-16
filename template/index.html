@@ -1,0 +1,91 @@
+---
+template: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{'./style.css'|asset}}">
+    <!--head-->
+</head>
+<body>
+    {% assign alias =  page.lang | prepend: "doc-" %}
+    {% assign config = links[alias] | default: page %}
+    <main class="o-doc">
+        <section class="o-doc_content">
+            <aside class="o-doc_aside">
+                {{ "./components/doc-menu/doc-menu.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "./components/doc-list-links/doc-list-links.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "./components/doc-list-link/doc-list-link.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "./components/doc-list-topic/doc-list-topic.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "./components/doc-next-page/doc-next-page.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "./components/doc-tabs/doc-tabs.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "./components/doc-details/doc-details.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "./components/doc-bundlephobia/doc-bundlephobia.tsx"  | asset: tag:true, insert:"head" }}
+                <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
+                    {% if config.assets.logo %}
+                            <a slot="header" href="{{config.link}}">
+                                <img  src="{{config.assets.logo}}" alt="">
+                            </a>
+                    {% endif %}
+                    <div slot="langs">
+                        Español - Ingles
+                    </div>
+                    {% for itemMenu in config.menu %}
+                        <doc-list-links slot="links-{{forloop.index}}" label="{{itemMenu.title}}">
+                            {% assign items = config.query[itemMenu.query] %}
+                            {% for item in items %}
+                                <a href="{{item.link}}" is="doc-list-link" {% if item.link == page.link %} active {% endif %}><span slot>{{item.linkTitle}}</span></a>
+                            {% endfor %}
+                        </doc-list-links>
+                    {% endfor %}
+
+                    <div slot="footer" class="o-doc_menuFooter">
+                        <a href="#">
+                            <img width="20px" src="{{'./assets/icon-github.svg'|asset}}" alt="Icon Github">
+                        </a>
+                        <a href="#">
+                            <img width="20px" src="{{'./assets/icon-twitter.svg'|asset}}" alt="Icon Twitter">
+                        </a>
+                        <select onchange="location.href=event.target.value">
+                            {% for lang in config.links.langs %}
+                                <option value="{{lang.link}}" {% if lang.lang == config.lang %} selected {% endif %}>{{lang.linkTitle}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </doc-menu>
+            </aside>
+            <article class="o-doc_inner">
+                <header class="o-doc_header">
+                    <h1 class="o-doc_title">{{page.title}}</h1>
+                    <p class="o-doc_subtitle">{{page.description}}</p>
+                </header>
+                <div class="o-doc_md">
+                    {{page.content}}
+                </div>
+            </article>
+            <div class="o-doc_topic">
+                <doc-list-topic label="{{config.labels.menuContent}}" selector=".o-doc_md" sticky="5rem"></doc-list-topic>
+            </div>
+        </section>
+        <footer class="o-doc_footer">
+            <div class="o-doc_pagination">
+                <div class="o-doc_paginationMax">
+                    {% if page.links.prev.link  %}
+                        <doc-next-page label-dir="{{config.labels.direction.prev}}" href="{{page.links.prev.link}}" label="{{page.links.prev.linkTitle}}" description="{{links[ page.links.prev.link ].description}}"></doc-next-page>
+                    {% endif %}
+                    {% if  page.links.next.link  %}
+                        <doc-next-page label-dir="{{config.labels.direction.next}}" href="{{page.links.next.link}}" label="{{page.links.next.linkTitle}}" description="{{links[ page.links.next.link ].description}}"></doc-next-page>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="o-doc_footerEnd">
+                <img src="{{config.assets.logoLight}}" alt="">
+            </div>
+        </footer>
+    </main>
+    <!--footer-->
+</body>
+</html>

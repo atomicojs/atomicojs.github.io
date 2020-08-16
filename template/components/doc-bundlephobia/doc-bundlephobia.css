@@ -1,0 +1,37 @@
+:host {
+    font-size: 1rem;
+    font-family: monospace;
+}
+.row {
+    position: relative;
+    width: 100%;
+    .btn-remove {
+        opacity: 0;
+    }
+    &:hover {
+        .btn-remove {
+            opacity: 1;
+        }
+    }
+}
+
+.col {
+    flex: 0%;
+    display: flex;
+    align-items: center;
+    div {
+        height: 0.5em;
+        border-radius: 100px;
+    }
+}
+
+.tag {
+    background: rgba(0, 0, 0, 0.15);
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 0px 0.25rem;
+    line-height: 1.5em;
+    border-radius: 100px;
+    margin-left: 0.5em;
+    font-weight: bold;
+}
