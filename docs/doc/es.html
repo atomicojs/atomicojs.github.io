@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hola, soy Atomico</title>
+     <meta name="description" content="Atomico es micro-librería para la creación de webcomponents solo usando funciones y hooks">
     <link rel="stylesheet" href="/assets/1948-style.css">
     <script type="module" src="/assets/4319-doc-menu.js" ></script><script type="module" src="/assets/5577-doc-list-links.js" ></script><script type="module" src="/assets/5371-doc-list-link.js" ></script><script type="module" src="/assets/5581-doc-list-topic.js" ></script><script type="module" src="/assets/5343-doc-next-page.js" ></script><script type="module" src="/assets/4297-doc-tabs.js" ></script><script type="module" src="/assets/4953-doc-details.js" ></script><script type="module" src="/assets/6031-doc-bundlephobia.js" ></script>
 </head>
@@ -25,7 +26,7 @@
                 <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
                     
                             <a slot="header" href="/doc/es">
-                                <img  src="/assets/2062-logo.svg" alt="">
+                                <img  src="/assets/2062-logo.svg" alt="Hola, soy Atomico">
                             </a>
                     
                     <div slot="langs">
@@ -61,12 +62,12 @@
                     
 
                     <div slot="footer" class="o-doc_menuFooter">
-                        <a href="#">
-                            <img width="20px" src="/assets/3306-icon-github.svg" alt="Icon Github">
-                        </a>
-                        <a href="#">
-                            <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
-                        </a>
+                        
+                        
+                            <a href="https://twitter.com/uppercod">
+                                <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
+                            </a>
+                        
                         <select onchange="location.href=event.target.value">
                             
                                 <option value="/doc" >English</option>
@@ -80,7 +81,7 @@
             <article class="o-doc_inner">
                 <header class="o-doc_header">
                     <h1 class="o-doc_title">Hola, soy Atomico</h1>
-                    <p class="o-doc_subtitle">Atomico es microlibreria para la creacion de webcomponents usando solo funciones y hooks</p>
+                    <p class="o-doc_subtitle">Atomico es micro-librería para la creación de webcomponents solo usando funciones y hooks</p>
                 </header>
                 <div class="o-doc_md">
                     <p><a href="https://circleci.com/gh/atomicojs/atomico"><img src="https://circleci.com/gh/atomicojs/atomico.svg?style=svg" alt="CircleCI"></a>
@@ -106,10 +107,10 @@ customElements<span class="token punctuation">.</span><span class="token functio
 <span class="token comment">## Generador de proyectos de Atomico</span>
 <span class="token function">npm</span> init @atomico</code></pre></doc-tabs>
 
-<h2 id="¿que-es-atomico">¿Que es Atomico?</h2><p>Atómico es una micro-librería de sintaxis moderna creada por Matias Trujillo alias <a href="https://github.com/uppercod">@uppercod</a>, Atomico simplifica la creacion de webcomponents remplazando el uso de clases por funciones para sostener lógica, atributos, propiedades, métodos y eventos.</p>
-<h2 id="ventajas-de-atomico">Ventajas de Atomico</h2><h3 id="tamaño-pequeño">Tamaño pequeño</h3><p>3 KB de Atomico se conforma de Virtual DOM, 9 tipos Hooks y soporte extendido a WebComponents.</p>
+<h2 id="¿que-es-atomico">¿Que es Atomico?</h2><p>Atómico es una micro-librería de sintaxis moderna, creada por Matias Trujillo alias <a href="https://github.com/uppercod">@uppercod</a>, Atomico simplifica la creación de webcomponents reemplazando el uso de clases por funciones para sostener lógica, atributos, propiedades, métodos y eventos.</p>
+<h2 id="ventajas-de-atomico">Ventajas de Atomico</h2><h3 id="tamaño-pequeño">Tamaño pequeño</h3><p>Los 3 KB de Atomico se conforman de Virtual DOM, 9 tipos Hooks y soporte extendido a WebComponents.</p>
 <p><doc-bundlephobia packages="[&#34;atomico&#34;,&#34;alpinejs&#34;,&#34;uce&#34;,&#34;preact&#34;,&#34;react+react-dom&#34;,&#34;vue&#34;,&#34;riot&#34;,&#34;slim-js&#34;,&#34;lit-element&#34;]"></doc-bundlephobia></p>
-<h3 id="virtual-dom-peculiar">Virtual DOM peculiar</h3><p>El virtual DOM de Atomico se diseño para ser eficiente y declarativo, gracias al uso del tag especial <code>host</code>. Toda declaración sobre el tag host se define sobre la instancia del webcomponent, permitiendo asociar eventos, propiedades y atributos, ejemplo:</p>
+<h3 id="virtual-dom-peculiar">Virtual DOM peculiar</h3><p>El virtual DOM de Atomico se diseñó para ser eficiente y declarativo, gracias al uso del tag especial <code>host</code>. Toda declaración sobre el tag host se define sobre la instancia del webcomponent, permitiendo asociar eventos, propiedades y atributos, ejemplo:</p>
 <doc-tabs auto-height tabs="Con Atomico, Sin Atomico">
 
 <pre class="markdown-code-container" data-code="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -143,19 +144,19 @@ customElements<span class="token punctuation">.</span><span class="token functio
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></doc-tabs>
 
-<h3 id="propspropiedades-estructuradas">props(Propiedades) estructuradas</h3><p>las propiedades como declaración estructuradas permiten la configuración avanzada para la generación de APIS a base de webcomponents, como:</p>
+<h3 id="propspropiedades-como-declaración-estructuradas">Props(Propiedades) como declaración estructuradas</h3><p>Las propiedades como declaración estructuradas permiten la configuración avanzada para la generación de APIS a base de webcomponents, como:</p>
 <ol>
 <li>Despachar un evento al modificar el valor de la prop.</li>
 <li>Reflejar el valor de la prop como atributo.</li>
-<li>Forzar tipos, Esto quiere decir que si declara una prop con tipo <code>Number</code>, el componente siempre recibirá un valor tipo <code>number</code>, incluso si este proviene de un atributo string.</li>
+<li>Forzar tipos: Si declara una prop con tipo <code>Number</code>, el componente siempre recibirá un valor tipo <code>number</code>, incluso si este proviene de un atributo string.</li>
 <li>Declarar estados iniciales para propiedades y atributos.</li>
 </ol>
-<h3 id="hooks-para-componer-y-atraer-lógica">Hooks para componer y atraer lógica</h3><p>Los hooks son una solución práctica creada por el equipo de React para la atracción y composición de lógica, con los hooks tu podrá:</p>
+<h3 id="hooks-para-componer-y-abstraer-lógica">Hooks para componer y abstraer lógica</h3><p>Los hooks son una solución práctica creada por el equipo de React para la abstracción y composición de lógica, con los hooks  podrás:</p>
 <ol>
-<li>Atraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook, ver <a href="#useprop">useProp</a> y <a href="#usestate">useState</a>.</li>
-<li>Crear y eliminar efectos según el ciclo de actualizaciones observado, ver <a href="#useeffect">useEffect</a>.</li>
-<li>Crear referencias anónimas, limitadas al scope de la función hook, ver <a href="#useref">useRef</a></li>
-<li>Memorizar retornos o callback, para minimizar el costo por ejecución de procesos, ver <a href="#usememo">useMemo</a> y <a href="#usecallback">useCallback</a>.</li>
+<li>Abstraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook. Ver <a href="#useprop">useProp</a> y <a href="#usestate">useState</a></li>
+<li>Crear y eliminar efectos según el ciclo de actualizaciones observado. Ver <a href="#useeffect">useEffect</a></li>
+<li>Crear referencias anónimas limitadas al scope de la función hook. Ver <a href="#useref">useRef</a></li>
+<li>Memorizar retornos o callback para minimizar el costo por ejecución. Ver <a href="#usememo">useMemo</a> y <a href="#usecallback">useCallback</a></li>
 </ol>
 
                 </div>

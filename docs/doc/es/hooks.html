@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hooks</title>
+     <meta name="description" content="Logica como componente">
     <link rel="stylesheet" href="/assets/1948-style.css">
     <script type="module" src="/assets/4319-doc-menu.js" ></script><script type="module" src="/assets/5577-doc-list-links.js" ></script><script type="module" src="/assets/5371-doc-list-link.js" ></script><script type="module" src="/assets/5581-doc-list-topic.js" ></script><script type="module" src="/assets/5343-doc-next-page.js" ></script><script type="module" src="/assets/4297-doc-tabs.js" ></script><script type="module" src="/assets/4953-doc-details.js" ></script><script type="module" src="/assets/6031-doc-bundlephobia.js" ></script>
 </head>
@@ -25,7 +26,7 @@
                 <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
                     
                             <a slot="header" href="/doc/es">
-                                <img  src="/assets/2062-logo.svg" alt="">
+                                <img  src="/assets/2062-logo.svg" alt="Hola, soy Atomico">
                             </a>
                     
                     <div slot="langs">
@@ -61,12 +62,12 @@
                     
 
                     <div slot="footer" class="o-doc_menuFooter">
-                        <a href="#">
-                            <img width="20px" src="/assets/3306-icon-github.svg" alt="Icon Github">
-                        </a>
-                        <a href="#">
-                            <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
-                        </a>
+                        
+                        
+                            <a href="https://twitter.com/uppercod">
+                                <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
+                            </a>
+                        
                         <select onchange="location.href=event.target.value">
                             
                                 <option value="/doc" >English</option>
@@ -83,9 +84,9 @@
                     <p class="o-doc_subtitle">Logica como componente</p>
                 </header>
                 <div class="o-doc_md">
-                    <h2 id="introducción">Introducción</h2><p>Los hooks son una solución práctica creada por el equipo de React para la atracción y composición de lógica, con los hooks tu podrá:</p>
+                    <h2 id="introducción">Introducción</h2><p>Los hooks son una solución práctica creada por el equipo de React para la abstracción y composición de lógica, con los hooks tu podrá:</p>
 <ol>
-<li>Atraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook, ver <a href="#useprop">useProp</a> y <a href="#usestate">useState</a>.</li>
+<li>Abstraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook, ver <a href="#useprop">useProp</a> y <a href="#usestate">useState</a>.</li>
 <li>Crear y eliminar efectos según el ciclo de actualizaciones observado, ver <a href="#useeffect">useEffect</a>.</li>
 <li>Crear referencias anónimas, limitadas al scope de la función hook, ver <a href="#useref">useRef</a></li>
 <li>Memorizar retornos o callback, para minimizar el costo por ejecución de procesos, ver <a href="#usememo">useMemo</a> y <a href="#usecallback">useCallback</a>.</li>

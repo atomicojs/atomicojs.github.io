@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Virtual Dom</title>
+     <meta name="description" content="Diseñado para ser simple y expresivo con la UI">
     <link rel="stylesheet" href="/assets/1948-style.css">
     <script type="module" src="/assets/4319-doc-menu.js" ></script><script type="module" src="/assets/5577-doc-list-links.js" ></script><script type="module" src="/assets/5371-doc-list-link.js" ></script><script type="module" src="/assets/5581-doc-list-topic.js" ></script><script type="module" src="/assets/5343-doc-next-page.js" ></script><script type="module" src="/assets/4297-doc-tabs.js" ></script><script type="module" src="/assets/4953-doc-details.js" ></script><script type="module" src="/assets/6031-doc-bundlephobia.js" ></script>
 </head>
@@ -25,7 +26,7 @@
                 <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
                     
                             <a slot="header" href="/doc/es">
-                                <img  src="/assets/2062-logo.svg" alt="">
+                                <img  src="/assets/2062-logo.svg" alt="Hola, soy Atomico">
                             </a>
                     
                     <div slot="langs">
@@ -61,12 +62,12 @@
                     
 
                     <div slot="footer" class="o-doc_menuFooter">
-                        <a href="#">
-                            <img width="20px" src="/assets/3306-icon-github.svg" alt="Icon Github">
-                        </a>
-                        <a href="#">
-                            <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
-                        </a>
+                        
+                        
+                            <a href="https://twitter.com/uppercod">
+                                <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
+                            </a>
+                        
                         <select onchange="location.href=event.target.value">
                             
                                 <option value="/doc" >English</option>
@@ -110,7 +111,7 @@
     </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></doc-tabs>
 
-<p><strong>Es un requisito para el compilador de JSX configurar e importar siempre funcion <code>h</code></strong></p>
+<p><strong>Es un requisito para el compilador de JSX configurar e importar siempre la funcion <code>h</code></strong></p>
 <doc-details summary="Configuracion para el uso de JSX con Babel">
 
 <pre class="markdown-code-container" data-code="json"><code class="language-json"><span class="token punctuation">{</span>

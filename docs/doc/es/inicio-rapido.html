@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atomico webcomponents</title>
+     <meta name="description" content="Diseñado  para simplificar la creación de webcomponents">
     <link rel="stylesheet" href="/assets/1948-style.css">
     <script type="module" src="/assets/4319-doc-menu.js" ></script><script type="module" src="/assets/5577-doc-list-links.js" ></script><script type="module" src="/assets/5371-doc-list-link.js" ></script><script type="module" src="/assets/5581-doc-list-topic.js" ></script><script type="module" src="/assets/5343-doc-next-page.js" ></script><script type="module" src="/assets/4297-doc-tabs.js" ></script><script type="module" src="/assets/4953-doc-details.js" ></script><script type="module" src="/assets/6031-doc-bundlephobia.js" ></script>
 </head>
@@ -25,7 +26,7 @@
                 <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
                     
                             <a slot="header" href="/doc/es">
-                                <img  src="/assets/2062-logo.svg" alt="">
+                                <img  src="/assets/2062-logo.svg" alt="Hola, soy Atomico">
                             </a>
                     
                     <div slot="langs">
@@ -61,12 +62,12 @@
                     
 
                     <div slot="footer" class="o-doc_menuFooter">
-                        <a href="#">
-                            <img width="20px" src="/assets/3306-icon-github.svg" alt="Icon Github">
-                        </a>
-                        <a href="#">
-                            <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
-                        </a>
+                        
+                        
+                            <a href="https://twitter.com/uppercod">
+                                <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
+                            </a>
+                        
                         <select onchange="location.href=event.target.value">
                             
                                 <option value="/doc" >English</option>
@@ -83,7 +84,7 @@
                     <p class="o-doc_subtitle">Diseñado  para simplificar la creación de webcomponents</p>
                 </header>
                 <div class="o-doc_md">
-                    <p>Atomico se crea para simplificar la creación de webcomponents, remplazando las Clases por funciones expresivas y minimalistas, ejemplo:</p>
+                    <p>Atomico se diseña para simplificar la creación de webcomponents, reemplazando las Clases por funciones expresivas y minimalistas.</p>
 <p><strong>Ejemplo de webcomponent con atomico</strong></p>
 <doc-tabs auto-height tabs="JS, JSX, TS, TSX">
 
@@ -150,23 +151,28 @@ customElements.define(&quot;my-component&quot;, c(myComponent));</code></pre></d
 <p>Donde:</p>
 <ul>
 <li><strong>myCounter</strong>: Representa la <a href="/doc/es/ui-del-webcomponent">interfaz de usuario</a> y lógica del componente.</li>
-<li><strong>myCounter.props</strong>: Representa las <a href="/doc/es/propiedades-del-webcomponent">propiedades del componente</a></li>
+<li><strong>myCounter.props</strong>: Representa las <a href="/doc/es/propiedades-del-webcomponent">propiedades del componente</a>.</li>
 </ul>
-<h2 id="componente">Componente</h2><p>Un componente con Atomico se divide en 2 partes, función y props(propiedades).</p>
-<h3 id="función">función</h3><p>representa la <a href="/doc/es/ui-del-webcomponent">Interfaz de usuario</a> y lógica, del componente como función podemos destacar:</p>
+<h2 id="componente">Componente</h2><p>Un componente con Atomico se divide en 2 partes: <a href="#función">Función</a> y <a href="#propspropiedades">Props(propiedades)</a>.</p>
+<h3 id="función">Función</h3><p>Representa la <a href="/doc/es/ui-del-webcomponent">Interfaz de usuario</a> y lógica del componente, de este uso de funciones como componente podemos destacar lo siguiente:</p>
 <ol>
 <li>La UI se declara mediante Virtual Dom usando JSX o Template String.</li>
 <li>Todo componente con Atomico debe retornar el tag <code>&lt;host/&gt;</code>.</li>
-<li>El shadowDom no es obligatorio, si quiere hacer uso de este debe definir la propiedad shadowDom en el tag host, ejemplo <code>&lt;host shadowDom&gt; 🌒 Inside ShadowDom! &lt;/host&gt;</code></li>
-<li>Los métodos se declaran en el tag <code>&lt;host/&gt;</code>, ejemplo <code>&lt;host myMethod={()=&gt;{...}/&gt;</code>.</li>
+<li>El uso del shadowDom no es obligatorio. Si quiere hacer uso de este debe definir la propiedad shadowDom en el tag host, ejemplo: <code>&lt;host shadowDom&gt; 🌒 Inside ShadowDom! &lt;/host&gt;</code>.</li>
+<li>Los métodos se declaran en el tag <code>&lt;host/&gt;</code>, ejemplo: <code>&lt;host myMethod={()=&gt;{...}/&gt;</code>.</li>
 <li>La lógica se representa mediante Hooks.</li>
 </ol>
-<h3 id="propspropiedades">props(Propiedades)</h3><p>Las props representan las <a href="/doc/es/propiedades-del-webcomponent">propiedades del componente</a>, de las props podemos destacar :</p>
+<h3 id="propspropiedades">Props(Propiedades)</h3><p>Las <code>props</code> representan las <a href="/doc/es/propiedades-del-webcomponent">propiedades del componente</a>, de las props podemos destacar lo siguiente:</p>
 <ol>
-<li>Los tipos son estrictos.</li>
-<li>Cada propiedad es un estado visible desde el tag, ejemplo <code>document.querySelector(&quot;my-component&quot;).value</code></li>
-<li>Las propiedades pueden ser <a href="/doc/es/propiedades-del-webcomponent#declaraciones-simples">declaraciones simples</a> o <a href="/doc/es/propiedades-del-webcomponent#declaraciones-estructuradas"> declaraciones estructuradas</a>.</li>
-<li>Atomico genera automáticamente el atributo, transformando el nombre de la prop de camelCase a kebab-case, ejemplo la propiedad <code>myCounter</code> será reconocida como el atributo <code>my-counter</code>. Este comportamiento puede modificarse con el uso de <a href="/doc/es/propiedades-del-webcomponent#declaraciones-estructuradas"> declaraciones estructuradas</a>.</li>
+<li><p>Los tipos son estrictos.</p>
+</li>
+<li><p>Cada propiedad es un estado visible desde el tag, ejemplo: <code>document.querySelector(&quot;my-component&quot;).value</code></p>
+</li>
+<li><p>Las propiedades pueden ser <a href="/doc/es/propiedades-del-webcomponent#declaraciones-simples">declaraciones simples</a> o <a href="/doc/es/propiedades-del-webcomponent#declaraciones-estructuradas"> declaraciones estructuradas</a>.</p>
+</li>
+<li><p>Atomico genera automáticamente el atributo, transformando el nombre de la <code>prop</code>(nombre de la propiedad) de camelCase a kebab-case, ejemplo:</p>
+<p> La propiedad <code>myCounter</code> será reconocida como el atributo <code>my-counter</code>. Este comportamiento puede modificarse con el uso de <a href="/doc/es/propiedades-del-webcomponent#declaraciones-estructuradas"> declaraciones estructuradas</a>.</p>
+</li>
 </ol>
 
                 </div>
@@ -179,7 +185,7 @@ customElements.define(&quot;my-component&quot;, c(myComponent));</code></pre></d
             <div class="o-doc_pagination">
                 <div class="o-doc_paginationMax">
                     
-                        <doc-next-page label-dir="Anterior" href="/doc/es" label="Bienvenido" description="Atomico es microlibreria para la creacion de webcomponents usando solo funciones y hooks"></doc-next-page>
+                        <doc-next-page label-dir="Anterior" href="/doc/es" label="Bienvenido" description="Atomico es micro-librería para la creación de webcomponents solo usando funciones y hooks"></doc-next-page>
                     
                     
                         <doc-next-page label-dir="Siguiente" href="/doc/es/ui-del-webcomponent" label="Interfaz de usuario" description="Diseñado para ser simple y expresivo con la UI"></doc-next-page>

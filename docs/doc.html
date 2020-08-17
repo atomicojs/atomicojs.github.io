@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome to Atomico</title>
+     <meta name="description" content="Atomico is a micro-library for creating webcomponents using only functions and hooks">
     <link rel="stylesheet" href="/assets/1948-style.css">
     <script type="module" src="/assets/4319-doc-menu.js" ></script><script type="module" src="/assets/5577-doc-list-links.js" ></script><script type="module" src="/assets/5371-doc-list-link.js" ></script><script type="module" src="/assets/5581-doc-list-topic.js" ></script><script type="module" src="/assets/5343-doc-next-page.js" ></script><script type="module" src="/assets/4297-doc-tabs.js" ></script><script type="module" src="/assets/4953-doc-details.js" ></script><script type="module" src="/assets/6031-doc-bundlephobia.js" ></script>
 </head>
@@ -25,7 +26,7 @@
                 <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
                     
                             <a slot="header" href="/doc">
-                                <img  src="/assets/2062-logo.svg" alt="">
+                                <img  src="/assets/2062-logo.svg" alt="Welcome to Atomico">
                             </a>
                     
                     <div slot="langs">
@@ -61,12 +62,12 @@
                     
 
                     <div slot="footer" class="o-doc_menuFooter">
-                        <a href="#">
-                            <img width="20px" src="/assets/3306-icon-github.svg" alt="Icon Github">
-                        </a>
-                        <a href="#">
-                            <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
-                        </a>
+                        
+                        
+                            <a href="https://twitter.com/uppercod">
+                                <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
+                            </a>
+                        
                         <select onchange="location.href=event.target.value">
                             
                                 <option value="/doc"  selected >English</option>
@@ -147,10 +148,10 @@ customElements<span class="token punctuation">.</span><span class="token functio
 <ol>
 <li>Dispatch an event when modifying the value of the prop.</li>
 <li>Reflect the value of the prop as an attribute.</li>
-<li>Forcing types, if you declare a prop with type <code>Number</code>, the component will always receive a value of type<code>number</code>, even if it comes from a string attribute.</li>
+<li>Forcing types: if you declare a prop with type <code>Number</code>, the component will always receive a value of type<code>number</code>, even if it comes from a string attribute.</li>
 <li>Declare initial states for properties and attributes.</li>
 </ol>
-<h3 id="hooks-to-compose-and-attract-logic">Hooks to compose and attract logic</h3><p>Hooks are a practical solution created by the React team for the attraction and composition of logic, with hooks you can:</p>
+<h3 id="hooks-to-compose-and-abstract-logic">Hooks to compose and abstract logic</h3><p>Hooks are a practical solution created by the React team for the abstraction and composition of logic, with hooks you can:</p>
 <ol>
 <li>Attract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook, see <a href="#usestate">useState</a>.</li>
 <li>Create and remove effects according to the observed update cycle, see <a href="#useeffect">useEffect</a>.</li>
