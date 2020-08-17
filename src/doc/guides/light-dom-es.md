@@ -11,7 +11,7 @@ links:
         link: shadow-dom-es.md
 ---
 
-Atomico entrega un soporte excepcional para la creacion de webcomponents sin la necesidad de usar Shadow DOM, resolviendo el uso de [CSS Global](#css-global) y [Slot](#slot).
+Atomico entrega un soporte excepcional para la creación de webcomponents sin la necesidad de usar Shadow DOM, resolviendo el uso de [CSS Global](#css-global) y [Slot](#slot).
 
 ## CSS global
 

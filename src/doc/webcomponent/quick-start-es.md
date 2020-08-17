@@ -17,7 +17,7 @@ links:
         link: user-interface-es.md
 ---
 
-Atomico se crea para simplificar la creación de webcomponents, remplazando las Clases por funciones expresivas y minimalistas, ejemplo:
+Atomico se diseña para simplificar la creación de webcomponents, reemplazando las Clases por funciones expresivas y minimalistas.
 
 **Ejemplo de webcomponent con atomico**
 
@@ -102,27 +102,29 @@ customElements.define("my-component", c(myComponent));
 Donde:
 
 -   **myCounter**: Representa la [interfaz de usuario]({{page.links.userInterface.link}}) y lógica del componente.
--   **myCounter.props**: Representa las [propiedades del componente]({{page.links.properties.link}})
+-   **myCounter.props**: Representa las [propiedades del componente]({{page.links.properties.link}}).
 
 ## Componente
 
-Un componente con Atomico se divide en 2 partes, función y props(propiedades).
+Un componente con Atomico se divide en 2 partes: [Función](#función) y [Props(propiedades)](#propspropiedades).
 
-### función
+### Función
 
-representa la [Interfaz de usuario]({{page.links.userInterface.link}}) y lógica, del componente como función podemos destacar:
+Representa la [Interfaz de usuario]({{page.links.userInterface.link}}) y lógica del componente, de este uso de funciones como componente podemos destacar lo siguiente:
 
 1. La UI se declara mediante Virtual Dom usando JSX o Template String.
 2. Todo componente con Atomico debe retornar el tag `<host/>`.
-3. El shadowDom no es obligatorio, si quiere hacer uso de este debe definir la propiedad shadowDom en el tag host, ejemplo `<host shadowDom> 🌒 Inside ShadowDom! </host>`
-4. Los métodos se declaran en el tag `<host/>`, ejemplo `<host myMethod={()=>{...}/>`.
+3. El uso del shadowDom no es obligatorio. Si quiere hacer uso de este debe definir la propiedad shadowDom en el tag host, ejemplo: `<host shadowDom> 🌒 Inside ShadowDom! </host>`.
+4. Los métodos se declaran en el tag `<host/>`, ejemplo: `<host myMethod={()=>{...}/>`.
 5. La lógica se representa mediante Hooks.
 
-### props(Propiedades)
+### Props(Propiedades)
 
-Las props representan las [propiedades del componente]({{page.links.properties.link}}), de las props podemos destacar :
+Las `props` representan las [propiedades del componente]({{page.links.properties.link}}), de las props podemos destacar lo siguiente:
 
 1. Los tipos son estrictos.
-2. Cada propiedad es un estado visible desde el tag, ejemplo `document.querySelector("my-component").value`
+2. Cada propiedad es un estado visible desde el tag, ejemplo: `document.querySelector("my-component").value`
 3. Las propiedades pueden ser [declaraciones simples]({{page.links.properties.link}}#declaraciones-simples) o [ declaraciones estructuradas]({{page.links.properties.link}}#declaraciones-estructuradas).
-4. Atomico genera automáticamente el atributo, transformando el nombre de la prop de camelCase a kebab-case, ejemplo la propiedad `myCounter` será reconocida como el atributo `my-counter`. Este comportamiento puede modificarse con el uso de [ declaraciones estructuradas]({{page.links.properties.link}}#declaraciones-estructuradas).
+4. Atomico genera automáticamente el atributo, transformando el nombre de la `prop`(nombre de la propiedad) de camelCase a kebab-case, ejemplo:
+
+    La propiedad `myCounter` será reconocida como el atributo `my-counter`. Este comportamiento puede modificarse con el uso de [ declaraciones estructuradas]({{page.links.properties.link}}#declaraciones-estructuradas).

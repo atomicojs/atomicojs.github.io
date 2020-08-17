@@ -1,0 +1,9 @@
+socials:
+  twitter: https://twitter.com/uppercod
+langs:
+  - link: doc.md
+    linkTitle: English
+    lang: en
+  - link: doc-es.md
+    linkTitle: Español
+    lang: es

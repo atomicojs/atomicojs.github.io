@@ -1,4 +1,5 @@
 ---
+$ref: doc.yaml
 title: Welcome to Atomico
 linkTitle: Welcome
 description: Atomico is a micro-library for creating webcomponents using only functions and hooks
@@ -37,7 +38,8 @@ assets:
     logo: ./assets/logo.svg
     logoLight: ./assets/logo-white.svg
 links:
-    langs: doc-langs.yaml
+    langs:
+        $ref: doc.yaml~langs
     next:
         link: ./doc/webcomponent/quick-start.md
 labels:
@@ -154,12 +156,12 @@ The properties as structured declaration allow advanced configuration for the ge
 
 1. Dispatch an event when modifying the value of the prop.
 2. Reflect the value of the prop as an attribute.
-3. Forcing types, if you declare a prop with type `Number`, the component will always receive a value of type`number`, even if it comes from a string attribute.
+3. Forcing types: if you declare a prop with type `Number`, the component will always receive a value of type`number`, even if it comes from a string attribute.
 4. Declare initial states for properties and attributes.
 
-### Hooks to compose and attract logic
+### Hooks to compose and abstract logic
 
-Hooks are a practical solution created by the React team for the attraction and composition of logic, with hooks you can:
+Hooks are a practical solution created by the React team for the abstraction and composition of logic, with hooks you can:
 
 1. Attract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook, see [useState](#usestate).
 2. Create and remove effects according to the observed update cycle, see [useEffect](#useeffect).

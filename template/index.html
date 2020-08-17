@@ -28,7 +28,7 @@ template: default
                 <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
                     {% if config.assets.logo %}
                             <a slot="header" href="{{config.link}}">
-                                <img  src="{{config.assets.logo}}" alt="">
+                                <img  src="{{config.assets.logo}}" alt="{{config.title}}">
                             </a>
                     {% endif %}
                     <div slot="langs">
@@ -44,12 +44,16 @@ template: default
                     {% endfor %}
 
                     <div slot="footer" class="o-doc_menuFooter">
-                        <a href="#">
-                            <img width="20px" src="{{'./assets/icon-github.svg'|asset}}" alt="Icon Github">
-                        </a>
-                        <a href="#">
-                            <img width="20px" src="{{'./assets/icon-twitter.svg'|asset}}" alt="Icon Twitter">
-                        </a>
+                        {% if config.socials.github %}
+                            <a href="{{config.socials.github}}">
+                                <img width="20px" src="{{'./assets/icon-github.svg'|asset}}" alt="Icon Github">
+                            </a>
+                        {% endif %}
+                        {% if config.socials.twitter %}
+                            <a href="{{config.socials.twitter}}">
+                                <img width="20px" src="{{'./assets/icon-twitter.svg'|asset}}" alt="Icon Twitter">
+                            </a>
+                        {% endif %}
                         <select onchange="location.href=event.target.value">
                             {% for lang in config.links.langs %}
                                 <option value="{{lang.link}}" {% if lang.lang == config.lang %} selected {% endif %}>{{lang.linkTitle}}</option>

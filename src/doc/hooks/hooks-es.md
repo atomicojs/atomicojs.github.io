@@ -14,9 +14,9 @@ links:
 
 ## Introducción
 
-Los hooks son una solución práctica creada por el equipo de React para la atracción y composición de lógica, con los hooks tu podrá:
+Los hooks son una solución práctica creada por el equipo de React para la abstracción y composición de lógica, con los hooks tu podrá:
 
-1. Atraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook, ver [useProp](#useprop) y [useState](#usestate).
+1. Abstraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook, ver [useProp](#useprop) y [useState](#usestate).
 2. Crear y eliminar efectos según el ciclo de actualizaciones observado, ver [useEffect](#useeffect).
 3. Crear referencias anónimas, limitadas al scope de la función hook, ver [useRef](#useref)
 4. Memorizar retornos o callback, para minimizar el costo por ejecución de procesos, ver [useMemo](#usememo) y [useCallback](#usecallback).

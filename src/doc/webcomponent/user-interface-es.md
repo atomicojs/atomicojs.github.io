@@ -49,7 +49,7 @@ function myComponent({ src }) {
 
 </doc-tabs>
 
-**Es un requisito para el compilador de JSX configurar e importar siempre funcion `h`**
+**Es un requisito para el compilador de JSX configurar e importar siempre la funcion `h`**
 
 <doc-details summary="Configuracion para el uso de JSX con Babel">
 

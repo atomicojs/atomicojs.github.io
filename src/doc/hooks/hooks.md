@@ -14,9 +14,9 @@ links:
 
 ## Introducción
 
-Hooks are a practical solution created by the React team for the attraction and composition of logic, with hooks you can:
+Hooks are a practical solution created by the React team for the abstraction and composition of logic, with hooks you can:
 
-1. Attract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook, see [useState](#usestate).
+1. Abstract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook, see [useState](#usestate).
 2. Create and remove effects according to the observed update cycle, see [useEffect](#useeffect).
 3. Create anonymous references, limited to the scope of the hook function, see [useRef](#useref).
 4. Memorize returns or callback, to minimize the cost per process execution, see [useMemo](#useMemo) and [useCallback](#usecallback).
