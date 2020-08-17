@@ -17,14 +17,7 @@ template: default
     <main class="o-doc">
         <section class="o-doc_content">
             <aside class="o-doc_aside">
-                {{ "./components/doc-menu/doc-menu.tsx"  | asset: tag:true, insert:"head" }}
-                {{ "./components/doc-list-links/doc-list-links.tsx"  | asset: tag:true, insert:"head" }}
-                {{ "./components/doc-list-link/doc-list-link.tsx"  | asset: tag:true, insert:"head" }}
-                {{ "./components/doc-list-topic/doc-list-topic.tsx"  | asset: tag:true, insert:"head" }}
-                {{ "./components/doc-next-page/doc-next-page.tsx"  | asset: tag:true, insert:"head" }}
-                {{ "./components/doc-tabs/doc-tabs.tsx"  | asset: tag:true, insert:"head" }}
-                {{ "./components/doc-details/doc-details.tsx"  | asset: tag:true, insert:"head" }}
-                {{ "./components/doc-bundlephobia/doc-bundlephobia.tsx"  | asset: tag:true, insert:"head" }}
+                {{ "index.js"  | asset: tag:true, insert:"head" }}
                 <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
                     {% if config.assets.logo %}
                             <a slot="header" href="{{config.link}}">
