@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Props(Properties)</title>
+     <meta name="description" content="Visible states of the webcomponent as attribute or property.">
+    <link rel="stylesheet" href="/assets/1948-style.css">
+    <script type="module" src="/assets/4319-doc-menu.js" ></script><script type="module" src="/assets/5577-doc-list-links.js" ></script><script type="module" src="/assets/5371-doc-list-link.js" ></script><script type="module" src="/assets/5581-doc-list-topic.js" ></script><script type="module" src="/assets/5343-doc-next-page.js" ></script><script type="module" src="/assets/4297-doc-tabs.js" ></script><script type="module" src="/assets/4953-doc-details.js" ></script><script type="module" src="/assets/6031-doc-bundlephobia.js" ></script>
+</head>
+<body>
+    
+    
+    <main class="o-doc">
+        <section class="o-doc_content">
+            <aside class="o-doc_aside">
+                
+                
+                
+                
+                
+                
+                
+                
+                <doc-menu type="large, aside 320w" br-radio="var(--doc_boxRadio)">
+                    
+                            <a slot="header" href="/doc">
+                                <img  src="/assets/2062-logo.svg" alt="Welcome to Atomico">
+                            </a>
+                    
+                    <div slot="langs">
+                        Español - Ingles
+                    </div>
+                    
+                        <doc-list-links slot="links-1" label="Component">
+                            
+                            
+                                <a href="/doc/quick-start" is="doc-list-link" ><span slot>Introduction</span></a>
+                            
+                                <a href="/doc/webcomponent-ui" is="doc-list-link" ><span slot>User interface</span></a>
+                            
+                                <a href="/doc/webcomponent-properties" is="doc-list-link"  active ><span slot>props(Properties)</span></a>
+                            
+                        </doc-list-links>
+                    
+                        <doc-list-links slot="links-2" label="Hooks">
+                            
+                            
+                                <a href="/doc/hooks" is="doc-list-link" ><span slot>Introduccion</span></a>
+                            
+                        </doc-list-links>
+                    
+                        <doc-list-links slot="links-3" label="Guides">
+                            
+                            
+                                <a href="/doc/shadow-dom" is="doc-list-link" ><span slot>Shadow DOM</span></a>
+                            
+                                <a href="/doc/light-dom" is="doc-list-link" ><span slot>Light DOM</span></a>
+                            
+                        </doc-list-links>
+                    
+
+                    <div slot="footer" class="o-doc_menuFooter">
+                        
+                        
+                            <a href="https://twitter.com/uppercod">
+                                <img width="20px" src="/assets/3450-icon-twitter.svg" alt="Icon Twitter">
+                            </a>
+                        
+                        <select onchange="location.href=event.target.value">
+                            
+                                <option value="/doc"  selected >English</option>
+                            
+                                <option value="/doc/es" >Español</option>
+                            
+                        </select>
+                    </div>
+                </doc-menu>
+            </aside>
+            <article class="o-doc_inner">
+                <header class="o-doc_header">
+                    <h1 class="o-doc_title">Props(Properties)</h1>
+                    <p class="o-doc_subtitle">Visible states of the webcomponent as attribute or property.</p>
+                </header>
+                <div class="o-doc_md">
+                    <p>Atomico improves the creation of attributes and properties by means of the X object that is assigned to the function, example:</p>
+<doc-tabs auto-height tabs="JSX, TS">
+
+<pre class="markdown-code-container" data-code="jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> h <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"atomico"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> value <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>host</span><span class="token punctuation">></span></span><span class="token plain-text">... </span><span class="token punctuation">{</span>value<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>host</span><span class="token punctuation">></span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+myComponent<span class="token punctuation">.</span>props <span class="token operator">=</span> <span class="token punctuation">{</span>
+    value<span class="token operator">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><pre class="markdown-code-container" data-code="ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Props <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"atomico"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> html <span class="token keyword">from</span> <span class="token string">"atomico/html"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> value <span class="token punctuation">}</span><span class="token operator">:</span> Props<span class="token operator">&lt;</span><span class="token keyword">typeof</span> myComponent<span class="token punctuation">.</span>props<span class="token operator">></span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;host>... </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/host></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+myComponent<span class="token punctuation">.</span>props <span class="token operator">=</span> <span class="token punctuation">{</span>
+    value<span class="token operator">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></doc-tabs>
+
+<p>Props are declared by:</p>
+<ol>
+<li><strong>name</strong>: name of the property to associate with the component.</li>
+<li><strong>value</strong>: defines the type and behavior of the component property.</li>
+</ol>
+<h2 id="types-of-statements">Types of statements</h2><h3 id="simple-statements">Simple statements</h3><p>simple declarations associate the type of the property value.</p>
+<pre class="markdown-code-container" data-code="js"><code class="language-js">myComponent<span class="token punctuation">.</span>props <span class="token operator">=</span> <span class="token punctuation">{</span>
+    myString<span class="token operator">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><h3 id="structured-statements">Structured statements</h3><p>Structured declarations define the type and additional behaviors, example:</p>
+<pre class="markdown-code-container" data-code="js"><code class="language-js">myComponent<span class="token punctuation">.</span>props <span class="token operator">=</span> <span class="token punctuation">{</span>
+    myString<span class="token operator">:</span> <span class="token punctuation">{</span>
+        type<span class="token operator">:</span> String<span class="token punctuation">,</span>
+        attr<span class="token operator">:</span> <span class="token string">"mystring"</span><span class="token punctuation">,</span>
+        event<span class="token operator">:</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">"ChageMyString"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        reflect<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">"Initial string!"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><p>Where:</p>
+<ul>
+<li><strong>type</strong>: <a href="#types">Type</a> of values accepted by the property.</li>
+<li><strong>attr</strong>: String, modify the default generated attribute.</li>
+<li><strong>event</strong>: Objeto, Configure the emission of an event every time the property value changes.</li>
+<li><strong>reflect</strong>: Boolean, Reflects the value of the property as Attribute.</li>
+<li><strong>value</strong>: Any, Defines an initial state for the property.</li>
+</ul>
+<h2 id="types">Types</h2><p>Atomico uses <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">Standard Objects</a> to recognize Types, the type support is composed of:</p>
+<div class="markdown-table-container"><table><tr>
+<th>Types</th>
+<th align="right">Support as an attribute</th>
+</tr>
+<tr>
+<td>Number</td>
+<td align="right">Si</td>
+</tr>
+<tr>
+<td>String</td>
+<td align="right">Si</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td align="right">Si</td>
+</tr>
+<tr>
+<td>Array</td>
+<td align="right">Si</td>
+</tr>
+<tr>
+<td>Object</td>
+<td align="right">Si</td>
+</tr>
+<tr>
+<td>Promise</td>
+<td align="right">-</td>
+</tr>
+<tr>
+<td>Function</td>
+<td align="right">-</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td align="right">-</td>
+</tr>
+</table></div>
+                </div>
+            </article>
+            <div class="o-doc_topic">
+                <doc-list-topic label="Contents" selector=".o-doc_md" sticky="5rem"></doc-list-topic>
+            </div>
+        </section>
+        <footer class="o-doc_footer">
+            <div class="o-doc_pagination">
+                <div class="o-doc_paginationMax">
+                    
+                        <doc-next-page label-dir="Prev" href="/doc/webcomponent-ui" label="User interface" description="Designed to be simple and expressive with the UI"></doc-next-page>
+                    
+                    
+                        <doc-next-page label-dir="Next" href="/doc/hooks" label="Hooks" description="Logic as a component"></doc-next-page>
+                    
+                </div>
+            </div>
+            <div class="o-doc_footerEnd">
+                <img src="/assets/2684-logo-white.svg" alt="">
+            </div>
+        </footer>
+    </main>
+    <!--footer-->
+</body>
+</html>

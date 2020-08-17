@@ -40,7 +40,7 @@
                             
                                 <a href="/doc/webcomponent-ui" is="doc-list-link" ><span slot>User interface</span></a>
                             
-                                <a href="/doc/propiedades-del-webcomponent" is="doc-list-link" ><span slot>props(Properties)</span></a>
+                                <a href="/doc/webcomponent-properties" is="doc-list-link" ><span slot>props(Properties)</span></a>
                             
                         </doc-list-links>
                     
@@ -84,7 +84,7 @@
                     <p class="o-doc_subtitle">Designed to simplify the creation of webcomponents</p>
                 </header>
                 <div class="o-doc_md">
-                    <p>Atomico is created to simplify the development of webcomponents, replacing Classes with expressive and minimalist functions, example:</p>
+                    <p>Atomico is designed to simplify the creation of webcomponents, replacing Classes with expressive and minimalist functions.</p>
 <p><strong>Component example</strong></p>
 <doc-tabs auto-height tabs="JS, JSX, TS, TSX">
 
@@ -151,10 +151,10 @@ customElements.define(&quot;my-component&quot;, c(myComponent));</code></pre></d
 <p>Where:</p>
 <ul>
 <li><strong>myCounter</strong>: Represents the <a href="/doc/webcomponent-ui">user interface</a> and logic of the component.</li>
-<li><strong>myCounter.props</strong>: Represents the <a href="/doc/propiedades-del-webcomponent">component properties</a>.</li>
+<li><strong>myCounter.props</strong>: Represents the <a href="/doc/webcomponent-properties">component properties</a>.</li>
 </ul>
-<h2 id="component">Component</h2><p>A component with Atomico is composed of 2 parts, function and props (properties).</p>
-<h3 id="function">Function</h3><p>represents the <a href="/doc/webcomponent-ui">User Interface</a> and logic, of the component as a function we can highlight:</p>
+<h2 id="component">Component</h2><p>A component with Atomico is composed of 2 parts: <a href="#function">Function</a> and <a href="#propsproperties">Props(properties)</a>.</p>
+<h3 id="function">Function</h3><p>It represents the <a href="/doc/webcomponent-ui">User Interface</a> and component logic, from this use of functions as a component we can highlight the following:</p>
 <ol>
 <li>The <a href="/doc/webcomponent-ui">User Interface</a> is created from Virtual Dom using JSX or Template String.</li>
 <li>Every component created with Atomico must return the tag <code>&lt;host/&gt;</code>.</li>
@@ -162,13 +162,14 @@ customElements.define(&quot;my-component&quot;, c(myComponent));</code></pre></d
 <li>the methods are declared in the tag <code>&lt;host/&gt;</code>, example <code>&lt;host myMethod={() =&gt; {...}/&gt;</code>.</li>
 <li>The logic is represented by Hooks.</li>
 </ol>
-<h3 id="propsproperties">props(Properties)</h3><p>The props represent the <a href="/doc/propiedades-del-webcomponent">component properties</a>, of the props we can highlight:</p>
+<h3 id="propsproperties">Props(Properties)</h3><p>The <code>props</code> represent the <a href="/doc/webcomponent-properties">component properties</a>, of the props we can highlight the following:</p>
 <ol>
 <li>The types are strict.</li>
-<li>Each property is a visible state from the tag, example <code>document.querySelector(&quot;my-component&quot;).value</code></li>
-<li>The properties can be <a href="/doc/propiedades-del-webcomponent#simple-declarations">simple declarations</a> or <a href="/doc/propiedades-del-webcomponent#structured-declarations">structured declarations</a>.</li>
-<li>Atomico automatically generates the attribute, transforming the prop name from camelCase to kebab-case, example: property <code>myCounter</code> is recognized as attribute <code>my-counter</code>. This behavior can be modified with the use of <a href="/doc/propiedades-del-webcomponent#structured-statements">structured statements</a>.</li>
+<li>Each property is a visible state from the tag, example: <code>document.querySelector(&quot;my-component&quot;).value</code></li>
+<li>The properties can be <a href="/doc/webcomponent-properties#simple-declarations">simple declarations</a> or <a href="/doc/webcomponent-properties#structured-declarations">structured declarations</a>.</li>
+<li>Atomico automatically generates the attribute, transforming the name of the <code>prop</code>(property name) from camelCase to kebab-case, example:</li>
 </ol>
+<p>property <code>myCounter</code> is recognized as attribute <code>my-counter</code>. This behavior can be modified with the use of <a href="/doc/webcomponent-properties#structured-statements">structured statements</a>.</p>
 
                 </div>
             </article>

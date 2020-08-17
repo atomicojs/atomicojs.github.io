@@ -38,6 +38,10 @@ assets:
     logo: ./assets/logo.svg
     logoLight: ./assets/logo-white.svg
 links:
+    hooks:
+        link: ./doc/hooks/hooks-es.md
+    props:
+        link: ./doc/webcomponent/properties-es.md
     langs:
         $ref: doc.yaml~langs
     next:
@@ -152,7 +156,7 @@ class MyComponent extends HTMLElement {
  
 ### Props(Propiedades) como declaración estructuradas
  
-Las propiedades como declaración estructuradas permiten la configuración avanzada para la generación de APIS a base de webcomponents, como:
+Las `props`(propiedades) como [declaración estructuradas]({{page.links.props.link}}) permiten la configuración avanzada para la generación de APIS a base de webcomponents, como:
  
 1. Despachar un evento al modificar el valor de la prop.
 2. Reflejar el valor de la prop como atributo.
@@ -161,9 +165,9 @@ Las propiedades como declaración estructuradas permiten la configuración avanz
  
 ### Hooks para componer y abstraer lógica
  
-Los hooks son una solución práctica creada por el equipo de React para la abstracción y composición de lógica, con los hooks  podrás:
+Los [Hooks]({{page.links.hooks.link}}) son una solución práctica creada por el equipo de React para la abstracción y composición de lógica, con los hooks  podrás:
  
-1. Abstraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook. Ver [useProp](#useprop) y [useState](#usestate)
-2. Crear y eliminar efectos según el ciclo de actualizaciones observado. Ver [useEffect](#useeffect)
-3. Crear referencias anónimas limitadas al scope de la función hook. Ver [useRef](#useref)
-4. Memorizar retornos o callback para minimizar el costo por ejecución. Ver [useMemo](#usememo) y [useCallback](#usecallback)
+1. Abstraer el estado y asociarlo al componente a demanda, mantenido un comportamiento predecible, ya que este no depende de los argumentos internos del componente, solo de la invocación del hook. Ver [useProp]({{page.links.hooks.link}}#useprop) y [useState]({{page.links.hooks.link}}#usestate)
+2. Crear y eliminar efectos según el ciclo de actualizaciones observado. Ver [useEffect]({{page.links.hooks.link}}#useeffect)
+3. Crear referencias anónimas limitadas al scope de la función hook. Ver [useRef]({{page.links.hooks.link}}#useref)
+4. Memorizar retornos o callback para minimizar el costo por ejecución. Ver [useMemo]({{page.links.hooks.link}}#usememo) y [useCallback]({{page.links.hooks.link}}#usecallback)

@@ -3,7 +3,7 @@ title: Props(Properties)
 description: Visible states of the webcomponent as attribute or property.
 order: 3
 linkTitle: props(Properties)
-link: "doc/propiedades-del-webcomponent"
+link: "doc/webcomponent-properties"
 tag: webcomponent
 lang: en
 links:

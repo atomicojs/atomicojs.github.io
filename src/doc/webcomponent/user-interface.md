@@ -49,7 +49,7 @@ function myComponent({ src }) {
 
 </doc-tabs>
 
-**It is required by the JSX compiler to always configure and import function `h`**
+**It is a requirement for the `JSX` compiler to always configure and import the `h` function**
 
 <doc-details summary="JSX configuration in Babel">
 

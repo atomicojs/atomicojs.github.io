@@ -17,7 +17,7 @@ links:
         link: user-interface.md
 ---
 
-Atomico is created to simplify the development of webcomponents, replacing Classes with expressive and minimalist functions, example:
+Atomico is designed to simplify the creation of webcomponents, replacing Classes with expressive and minimalist functions.
 
 **Component example**
 
@@ -106,11 +106,11 @@ Where:
 
 ## Component
 
-A component with Atomico is composed of 2 parts, function and props (properties).
+A component with Atomico is composed of 2 parts: [Function](#function) and [Props(properties)](#propsproperties).
 
 ### Function
 
-represents the [User Interface]({{page.links.userInterface.link}}) and logic, of the component as a function we can highlight:
+It represents the [User Interface]({{page.links.userInterface.link}}) and component logic, from this use of functions as a component we can highlight the following:
 
 1. The [User Interface]({{page.links.userInterface.link}}) is created from Virtual Dom using JSX or Template String.
 2. Every component created with Atomico must return the tag `<host/>`.
@@ -118,11 +118,13 @@ represents the [User Interface]({{page.links.userInterface.link}}) and logic, of
 4. the methods are declared in the tag `<host/>`, example `<host myMethod={() => {...}/>`.
 5. The logic is represented by Hooks.
 
-### props(Properties)
+### Props(Properties)
 
-The props represent the [component properties]({{page.links.properties.link}}), of the props we can highlight:
+The `props` represent the [component properties]({{page.links.properties.link}}), of the props we can highlight the following:
 
 1. The types are strict.
-2. Each property is a visible state from the tag, example `document.querySelector("my-component").value`
+2. Each property is a visible state from the tag, example: `document.querySelector("my-component").value`
 3. The properties can be [simple declarations]({{page.links.properties.link}}#simple-declarations) or [structured declarations]({{page.links.properties.link}}#structured-declarations).
-4. Atomico automatically generates the attribute, transforming the prop name from camelCase to kebab-case, example: property `myCounter` is recognized as attribute `my-counter`. This behavior can be modified with the use of [structured statements]({{page.links.properties.link}}#structured-statements).
+4. Atomico automatically generates the attribute, transforming the name of the `prop`(property name) from camelCase to kebab-case, example:
+
+property `myCounter` is recognized as attribute `my-counter`. This behavior can be modified with the use of [structured statements]({{page.links.properties.link}}#structured-statements).

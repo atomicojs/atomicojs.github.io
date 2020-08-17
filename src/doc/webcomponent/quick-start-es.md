@@ -123,7 +123,7 @@ Representa la [Interfaz de usuario]({{page.links.userInterface.link}}) y lógica
 Las `props` representan las [propiedades del componente]({{page.links.properties.link}}), de las props podemos destacar lo siguiente:
 
 1. Los tipos son estrictos.
-2. Cada propiedad es un estado visible desde el tag, ejemplo: `document.querySelector("my-component").value`
+2. Cada propiedad es un estado visible desde el tag, ejemplo: `document.querySelector("my-component").value`.
 3. Las propiedades pueden ser [declaraciones simples]({{page.links.properties.link}}#declaraciones-simples) o [ declaraciones estructuradas]({{page.links.properties.link}}#declaraciones-estructuradas).
 4. Atomico genera automáticamente el atributo, transformando el nombre de la `prop`(nombre de la propiedad) de camelCase a kebab-case, ejemplo:
 

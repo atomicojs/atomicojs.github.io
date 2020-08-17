@@ -40,7 +40,7 @@
                             
                                 <a href="/doc/webcomponent-ui" is="doc-list-link" ><span slot>User interface</span></a>
                             
-                                <a href="/doc/propiedades-del-webcomponent" is="doc-list-link" ><span slot>props(Properties)</span></a>
+                                <a href="/doc/webcomponent-properties" is="doc-list-link" ><span slot>props(Properties)</span></a>
                             
                         </doc-list-links>
                     
@@ -108,7 +108,7 @@ customElements<span class="token punctuation">.</span><span class="token functio
 <span class="token function">npm</span> init @atomico</code></pre></doc-tabs>
 
 <h2 id="what-is-atomico">What is Atomico?</h2><p>Atomico is a modern syntax micro-library created by Matias Trujillo alias <a href="https://github.com/uppercod">@uppercod</a>, Atomico simplifies the creation of webcomponents by replacing the use of classes with functions to hold logic, attributes, properties, methods and events.</p>
-<h2 id="advantages-of-atomico">Advantages of Atomico</h2><h3 id="small-size">Small size</h3><p>3 KB of Atomico is made up of Virtual DOM, 9 types of Hooks and extended support to WebComponents.</p>
+<h2 id="advantages-of-atomico">Advantages of Atomico</h2><h3 id="small-size">Small size</h3><p>The 3 KB of Atomico is made up of Virtual DOM, 9 types of Hooks and extended support to WebComponents.</p>
 <p><doc-bundlephobia packages="[&#34;atomico&#34;,&#34;alpinejs&#34;,&#34;uce&#34;,&#34;preact&#34;,&#34;react+react-dom&#34;,&#34;vue&#34;,&#34;riot&#34;,&#34;slim-js&#34;,&#34;lit-element&#34;]"></doc-bundlephobia></p>
 <h3 id="expressive-virtual-dom">Expressive virtual DOM</h3><p>The virtual DOM is efficient and declarative, thanks to the use of the special <code>host</code> tag. Every declaration on the host tag is defined on the webcomponent instance, allowing to associate events, properties and attributes, for example:</p>
 <doc-tabs auto-height tabs="Con Atomico, Sin Atomico">
@@ -144,19 +144,19 @@ customElements<span class="token punctuation">.</span><span class="token functio
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></doc-tabs>
 
-<h3 id="props">Props</h3><p>The properties as structured declaration allow advanced configuration for the generation of APIs based on webcomponents, such as:</p>
+<h3 id="props-properties-as-structured-declaration">Props (Properties) as Structured Declaration</h3><p>The properties as <a href="/doc/webcomponent-properties">Structured Declaration</a> allow advanced configuration for the generation of APIs based on webcomponents, such as:</p>
 <ol>
 <li>Dispatch an event when modifying the value of the prop.</li>
 <li>Reflect the value of the prop as an attribute.</li>
 <li>Forcing types: if you declare a prop with type <code>Number</code>, the component will always receive a value of type<code>number</code>, even if it comes from a string attribute.</li>
 <li>Declare initial states for properties and attributes.</li>
 </ol>
-<h3 id="hooks-to-compose-and-abstract-logic">Hooks to compose and abstract logic</h3><p>Hooks are a practical solution created by the React team for the abstraction and composition of logic, with hooks you can:</p>
+<h3 id="hooks-to-compose-and-abstract-logic">Hooks to compose and abstract logic</h3><p><a href="/doc/es/hooks">Hooks</a> are a practical solution created by the React team for the abstraction and composition of logic, with hooks you can:</p>
 <ol>
-<li>Attract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook, see <a href="#usestate">useState</a>.</li>
-<li>Create and remove effects according to the observed update cycle, see <a href="#useeffect">useEffect</a>.</li>
-<li>Create anonymous references, limited to the scope of the hook function, see <a href="#useref">useRef</a>.</li>
-<li>Memorize returns or callback, to minimize the cost per process execution, see <a href="#useMemo">useMemo</a> and <a href="#usecallback">useCallback</a>.</li>
+<li>Attract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook. See <a href="/doc/es/hooks#usestate">useState</a>.</li>
+<li>Create and remove effects according to the observed update cycle. See <a href="/doc/es/hooks#useeffect">useEffect</a>.</li>
+<li>Create anonymous references limited to the scope of the hook function. See <a href="/doc/es/hooks#useref">useRef</a>.</li>
+<li>Memorize returns or callbacks to minimize the cost per execution. See <a href="/doc/es/hooks#useMemo">useMemo</a> and <a href="/doc/es/hooks#usecallback">useCallback</a>.</li>
 </ol>
 
                 </div>

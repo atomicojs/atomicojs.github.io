@@ -38,6 +38,10 @@ assets:
     logo: ./assets/logo.svg
     logoLight: ./assets/logo-white.svg
 links:
+    hooks:
+        link: ./doc/hooks/hooks-es.md
+    props:
+        link: ./doc/webcomponent/properties.md
     langs:
         $ref: doc.yaml~langs
     next:
@@ -101,7 +105,7 @@ Atomico is a modern syntax micro-library created by Matias Trujillo alias [@uppe
 
 ### Small size
 
-{{page.fetch.bundlephobia.gzip|divided_by:1000|round:1}} KB of Atomico is made up of Virtual DOM, 9 types of Hooks and extended support to WebComponents.
+The {{page.fetch.bundlephobia.gzip|divided_by:1000|round:1}} KB of Atomico is made up of Virtual DOM, 9 types of Hooks and extended support to WebComponents.
 
 <doc-bundlephobia packages="{{page.packagesDiff|json|escape}}"></doc-bundlephobia>
 
@@ -150,9 +154,9 @@ class MyComponent extends HTMLElement {
 
 </doc-tabs>
 
-### Props
+### Props (Properties) as Structured Declaration
 
-The properties as structured declaration allow advanced configuration for the generation of APIs based on webcomponents, such as:
+The properties as [Structured Declaration]({{page.links.props.link}}) allow advanced configuration for the generation of APIs based on webcomponents, such as:
 
 1. Dispatch an event when modifying the value of the prop.
 2. Reflect the value of the prop as an attribute.
@@ -161,9 +165,9 @@ The properties as structured declaration allow advanced configuration for the ge
 
 ### Hooks to compose and abstract logic
 
-Hooks are a practical solution created by the React team for the abstraction and composition of logic, with hooks you can:
+[Hooks]({{page.links.hooks.link}}) are a practical solution created by the React team for the abstraction and composition of logic, with hooks you can:
 
-1. Attract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook, see [useState](#usestate).
-2. Create and remove effects according to the observed update cycle, see [useEffect](#useeffect).
-3. Create anonymous references, limited to the scope of the hook function, see [useRef](#useref).
-4. Memorize returns or callback, to minimize the cost per process execution, see [useMemo](#useMemo) and [useCallback](#usecallback).
+1. Attract the state and associate it with the component on demand, maintaining a predictable behavior, since it does not depend on the internal arguments of the component, only on the invocation of the hook. See [useState]({{page.links.hooks.link}}#usestate).
+2. Create and remove effects according to the observed update cycle. See [useEffect]({{page.links.hooks.link}}#useeffect).
+3. Create anonymous references limited to the scope of the hook function. See [useRef]({{page.links.hooks.link}}#useref).
+4. Memorize returns or callbacks to minimize the cost per execution. See [useMemo]({{page.links.hooks.link}}#useMemo) and [useCallback]({{page.links.hooks.link}}#usecallback).
