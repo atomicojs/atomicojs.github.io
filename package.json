@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "estack dev {src,template}/**/*.{html,md};src/*.yaml --js estack.js",
-    "build": "estack dev {src,template}/**/*.{html,md};src/*.yaml --js estack.js",
+    "build": "estack build {src,template}/**/*.{html,md};src/*.yaml --js estack.js",
     "create:component": "tfolder tfolder/component src/components",
     "create:hook": "tfolder tfolder/hook src/hooks"
   },
