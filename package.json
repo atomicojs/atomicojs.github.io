@@ -4,7 +4,7 @@
   "meta": {
     "title": "Started",
     "description": "Hassle-free starter template, perfect for starting with Atomico",
-    "branch": "https://github.com/atomicojs/atomico/tree/1-started/"
+    "branch": "https://github.com/atomicojs/atomico/tree/master/"
   },
   "version": "0.0.0",
   "publishConfig": {
@@ -20,9 +20,8 @@
     "atomico": "^1.2.1"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-sucrase": "^3.1.0",
-    "estack": "^0.17.0",
+    "estack": "^0.17.1",
     "tfolder-cli": "^0.2.0"
   },
   "estack": {
