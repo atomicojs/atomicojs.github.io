@@ -1,17 +1,17 @@
 ---
 title: Shadow DOM
-description: native encapsulation for Webcomponent
+description: enpcasulamiento nativo para webcomponent.
 order: 1
 linkTitle: Shadow DOM
 category: guides
 links:
-    prev:
+    next:
         link: light-dom-es.md
 ---
 
-## Use the Shadow DOM
+## Usar el Shadow DOM
 
-Every node that declares property `shadowDom` will enable its use, example:
+Todo nodo que declare la propiedad `shadowDom` habilitara su uso, ejemplo:
 
 <doc-tabs tabs="JSX, Template String">
 
@@ -31,9 +31,9 @@ function myComponent() {
 
 </doc-tabs>
 
-## Style encapsulation
+## Encapsulación de estilo
 
-The Shadow DOM generates an encapsulation that allows maintaining CSS effects only in the component, example:
+El Shadow DOM genera un encapsulamiento que permite mantener efectos del CSS solo en el componente, ejemplo:
 
 <doc-tabs auto-height tabs="JSX, Template String">
 
@@ -74,11 +74,11 @@ function myComponent() {
 
 </doc-tabs>
 
-**indifferent to the use of the global selector `button`, the style effect will only be present inside the component**. This behavior allows the UI to be kept without conflict with the global styles.
+**Indiferente al uso del selector global `button` el efecto de estilo solo estará presente en el interior del componente**. Este comportamiento permite mantener UI sin conflicto con el estilos globales.
 
 ### :host
 
-The `:host` pseudo-class that points to the container that declares the use of the Shadow DOM, example:
+El pseudo-clase `:host` que apunta al contenedor que declare el uso del Shadow DOM, ejemplo:
 
 ```jsx
 :host{
@@ -87,21 +87,21 @@ The `:host` pseudo-class that points to the container that declares the use of t
 }
 ```
 
-The container that the above css applies will own the host declarations.
+El contenedor que aplique el css anterior poseerá las declaraciones de host.
 
 ### Custom Properties
 
-CSS variables are the efficient way to maintain styles with dynamic behaviors.
+Las variables de CSS son la forma eficiente de mantener estilos con comportamientos dinámicos.
 
 **Recomendaciones de nombre**:
 
-`--<component>_<value>`: pattern for static local variables, eg: `--myComponent_colorPrimary`, this syntax minimizes the name conflict that can be generated with the use of customProperties.
+`--<component>_<value>` : patron para variables locales estáticas, ej: `--myComponent_colorPrimary`, esta sintaxis minimiza a el conflicto de nombre que puede generarse con el uso de las customProperties.
 
-`- <value>`: pattern for dynamic local variables: `--color`.
+`--<value>` : patron para variables locales dinámicas : `--color`.
 
-**Example**
+**Ejemplo de alcances**
 
-<doc-tabs auto-height tabs="Static, Dinamic">
+<doc-tabs auto-height tabs="Estático, Dinámico">
 
 ```jsx
 const style = `
@@ -141,21 +141,21 @@ myComponent.props = {
 
 </doc-tabs>
 
-### Limitations
+### Limitaciones
 
-**font import**
+**importación de fuentes**
 
-The Shadow DOM does not support the use of the `@font-face` rule either by import or declaration. Although there is a CSSStyleSheet as a proposal to correct this, it is not yet adopted by all browsers that support WebComponent natively. **For the use of fonts, the resources associated with this must be included in the document** thus allowing the use of the typographic resource.
+El Shadow DOM no soporta el uso de la regla `@font-face` sea por importación o declaración, Si bien existe CSSStyleSheet como propuesta para corregir esto aun no es adoptada por todos los navegadores que soportan WebComponent de forma nativa. **Para el uso de fuentes se deberá incluir en documento los recursos asociados a esta** permitiendo asi el uso del recurso tipográfico.
 
 ## Tag slot
 
-The slot tag is a native Shadow DOM resource that allows the component's Light DOM content to be reflected within the Shadow DOM, for example:
+El tag slot es un recurso nativo del Shadow DOM que permite reflejar el contenido del Light DOM del componente dentro del Shadow DOM, ejemplo:
 
 <doc-tabs auto-height tabs="Html, Componente">
 
 ```html
 <my-component>
-    <h1>my slot</h1>
+    <h1>mi slot</h1>
 </my-component>
 ```
 
@@ -173,15 +173,15 @@ function myComponent() {
 
 </doc-tabs>
 
-The DOM of the component will reflect the `h1` tag inside the`slot` tag.
+El DOM del componente reflejara el tag `h1` en el interior del tag `slot`.
 
-## additional Shadow DOM features
+## características adicionales del Shadow DOM
 
 <doc-details summary="::slotted">
 
-### :: slotted
+### ::slotted
 
-The pseudo-elements `::slotted(<selector>)` allows modifying the style of the html present in the Light DOM associated with the slot. [see more](https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted)
+El pseudo-elementos `::slotted(<selector>)` permite modificar el estilo del html presente en el Light DOM asociado al slot. [ver más](https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted)
 
 ```css
 /* Selects any element placed inside a slot */

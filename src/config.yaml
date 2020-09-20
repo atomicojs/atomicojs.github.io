@@ -1,0 +1,23 @@
+lang: en
+logo:
+  $link: logo-white.svg
+repo: https://github.com/atomicojs/atomicojs.github.io/tree/master
+socials:
+  github: uppercod
+  twitter: uppercod
+menu:
+  - title:
+      es: WebComponent con Atomico
+      en: WebComponent con Atomico
+    category: fundamentals
+  - title:
+      es: Api Hooks
+      en: Api Hooks
+    category: hooks
+  - title:
+      es: Guias
+      en: Guias
+    category: guides
+aside:
+  content:
+    title: Contenido

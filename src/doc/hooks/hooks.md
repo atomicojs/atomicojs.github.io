@@ -2,9 +2,7 @@
 title: Hooks
 description: Logic as a component
 linkTitle: "Introduccion"
-tag: hooks
-link: "doc/hooks"
-lang: en
+category: hooks
 links:
     prev:
         link: ../webcomponent/properties.md

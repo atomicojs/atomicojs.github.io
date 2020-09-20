@@ -1,19 +1,19 @@
 ---
-title: Light DOM
-description: Webcomponents without Shadow DOM
+title: Light dom
+description: Webcomponents libres del Shadow DOM
 order: 2
 linkTitle: Light DOM
 category: guides
 links:
     prev:
-        link: shadow-dom.md
+        link: shadow-dom-es.md
 ---
 
-Atomico provides exceptional support for creating webcomponents without the need to use Shadow DOM, solving the use of [Global CSS](#global-css) and [Slot](#slots).
+Atomico entrega un soporte excepcional para la creación de webcomponents sin la necesidad de usar Shadow DOM, resolviendo el uso de [CSS Global](#css-global) y [Slot](#slot).
 
-## Global CSS
+## CSS global
 
-A recurring feature of CSS, CMS or Templates libraries that manifest global classes whose inheritance is required to preserve the aesthetics of the UI.
+característica recurrente de bibliotecas de CSS, CMS o Templates que manifiestan clases globales de cuya herencia es requerida para conservar la estética de la UI.
 
 <doc-tabs tabs="Componente, HTML">
 
@@ -41,13 +41,13 @@ customElements.define("ui-alert", c(myComponent));
 
 </doc-tabs>
 
-If `alert alert-*` was a class in your global CSS system, the component would reflect the style of className in your UI without any problem. **This format of webcomponents without Shadow DOM is used by AMP PAGES**
+Si `alert alert-*` fuera una clase de su sistema de CSS global, el componente reflejara el estilo de className en su UI sin inconvenientes. **Este formato de webcomponents sin Shadow DOM es usado por las AMP PAGES**
 
-## Slots
+## Slot
 
-This technique allows to homologate the slots in Light DOM, recovering the instantiated nodes to be used as part of the Virtual DOM.
+Esta técnica permite homologar los slot en Light DOM recuperando los nodos instanciado para ser usados como parte del Virtual DOM .
 
-This is easily exemplified with a customHook that shows how to get these nodes to be manipulated from the component.
+Esto se ejemplifica fácilmente con un customHook que enseña como obtener estos nodos para ser manipulados desde el componente.
 
 ```jsx
 import { h, c, useHost } from "atomico";
@@ -72,4 +72,4 @@ function myComponent() {
 }
 ```
 
-In this example we highlight the use of the special Atomico hook `useHost` this gets a reference as an instance of the tag.
+Del ejemplo se destaca el uso del hook especial de Atomico `useHost` este obtiene una referencia como instancia del tag asociado al componente.
