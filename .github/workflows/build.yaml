@@ -26,6 +26,6 @@ jobs:
           author_name: uppercod
           #author_email: kohrongying@gmail.com
           author_email: mtrujillo@outllok.cl
-          message: "Build files 2"
+          message: "Build files 3"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

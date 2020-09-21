@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-sucrase": "^3.1.0",
-    "estack": "^0.17.1",
+    "estack": "^0.17.2",
     "tfolder-cli": "^0.2.0"
   },
   "estack": {
