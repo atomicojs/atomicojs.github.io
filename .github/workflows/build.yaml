@@ -18,14 +18,3 @@ jobs:
           node-version: "14.x"
       - run: npm install
       - run: npm run build
-
-      - name: Commit and push
-        uses: EndBug/add-and-commit@v4
-        with:
-          #author_name: kohrongying
-          author_name: uppercod
-          #author_email: kohrongying@gmail.com
-          author_email: mtrujillo@outllok.cl
-          message: "Build files 5"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
