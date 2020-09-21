@@ -1,20 +1,31 @@
-name: Node.js CI
+name: deploy
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Node install
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "14.5.0"
       - run: npm install
-      - run: npm run build --if-present
+      - run: npm run build
+
+      - name: Commit and push
+        uses: EndBug/add-and-commit@v4
+        with:
+          #author_name: kohrongying
+          author_name: uppercod
+          #author_email: kohrongying@gmail.com
+          author_email: mtrujillo@outllok.cl
+          message: "Build files 4"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
