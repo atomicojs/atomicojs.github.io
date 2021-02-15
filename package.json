@@ -17,7 +17,7 @@
     "atomico": "^1.12.1"
   },
   "devDependencies": {
-    "@devserver/build": "^0.12.1",
-    "@devserver/cli": "^0.12.1"
+    "@devserver/build": "^0.12.2",
+    "@devserver/cli": "^0.12.2"
   }
 }
