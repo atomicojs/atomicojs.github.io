@@ -1,0 +1,19 @@
+.button {
+  border-radius: 100vh;
+  border: var(--site-button_border-width, 0.125rem) solid
+    var(--site-button_border-color, rgba(255, 255, 255, 0.5));
+  padding: 0.3rem;
+  display: inline-flex;
+  color: unset;
+  text-decoration: none;
+}
+.button_content {
+  padding: 0.25rem 0.5rem;
+}
+.button_icon {
+  display: block;
+}
+::slotted(img[slot="icon"]) {
+  height: 100%;
+  display: block;
+}

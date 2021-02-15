@@ -1,13 +1,10 @@
 {
     "compilerOptions": {
-       "declaration" : false,
+        "module": "esnext",
+        "moduleResolution": "node",
         "target": "esnext",
         "checkJs": true,
-        "jsx": "preserve",
-        "jsxFactory":"h"
-    },
-    "include": [
-        "src/**/*",
-        "template/**/*"
-    ]
+        "jsx": "react-jsx",
+        "jsxImportSource": "atomico",
+    }
 }

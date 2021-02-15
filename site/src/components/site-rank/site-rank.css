@@ -1,0 +1,49 @@
+.rank_item {
+  display: flex;
+  border-radius: 0px 5rem 5rem 0px;
+  margin: 1rem 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rank_dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0.4rem;
+  border-radius: 100%;
+  background: black;
+}
+
+.rank_size {
+  font-size: 0.6rem;
+  margin: 0.2rem;
+  border-radius: 2rem;
+  padding: 0.1rem 0.4rem;
+  background: #000;
+}
+
+.rank_size > *:last-child {
+  opacity: 0.5;
+}
+
+.rank_item-success {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--site-rank_success, #37ffca)
+  );
+}
+.rank_item-warning {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--site-rank_warning, gold)
+  );
+}
+.rank_item-danger {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--site-rank_danger, tomato)
+  );
+}

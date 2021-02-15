@@ -1,44 +1,23 @@
 {
-  "name": "atomico-base",
-  "description": "a repo to start with atomico",
-  "meta": {
-    "title": "Started",
-    "description": "Hassle-free starter template, perfect for starting with Atomico",
-    "branch": "https://github.com/atomicojs/atomico/tree/master/"
-  },
-  "version": "0.0.0",
-  "publishConfig": {
-    "access": "public"
-  },
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "estack dev {src,template}/**/*.{html,md};src/*.yaml --js estack.js",
-    "build": "estack build {src,template}/**/*.{html,md};src/*.yaml docs --js estack.js",
-    "create:component": "tfolder tfolder/component src/components",
-    "create:hook": "tfolder tfolder/hook src/hooks"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "devserver dev site --port 8080  --jsxImportSource atomico",
+    "build": "devserver build site/**/*.html docs --href /docs/  --minify --jsxImportSource atomico"
+  },
+  "author": "",
+  "license": "ISC",
+  "imports": {
+    "atomico": "http://unpkg.com/atomico"
   },
   "dependencies": {
-    "atomico": "^1.2.1"
+    "atomico": "^1.12.1"
   },
   "devDependencies": {
-    "@rollup/plugin-sucrase": "^3.1.0",
-    "estack": "^0.17.5",
-    "tfolder-cli": "^0.2.0"
-  },
-  "estack": {
-    "js": {
-      "plugins": {
-        "@rollup/plugin-sucrase": {
-          "jsxPragma": "h",
-          "production": true,
-          "exclude": [
-            "node_modules/**"
-          ],
-          "transforms": [
-            "jsx",
-            "typescript"
-          ]
-        }
-      }
-    }
+    "@devserver/build": "^0.12.1",
+    "@devserver/cli": "^0.12.1"
   }
 }
