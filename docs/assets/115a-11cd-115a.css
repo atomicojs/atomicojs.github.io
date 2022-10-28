@@ -1,5 +1,0 @@
-.gist{display:block;background:var(--gist_bg,
-    linear-gradient(145deg, rgb(164, 249, 221, 0.1), transparent)
-  );overflow:hidden;border-radius:var(--gist-rds, 1rem);box-shadow:var(--gist-bxsh, 0px 0px 2.5rem rgba(0, 0, 0, 0.15))}.gist .blob-num:before{content:attr(data-line-number);display:block;padding-right:1em}.gist,.gist table{width:100%}.gist-file{width:100%;overflow-x:auto;font-size:1rem;font-family:monospace;padding:1rem}.gist-header{height:2.5rem;background:var(--gist_header-bg,
-    linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent)
-  );display:flex;max-width:100%;overflow:auto hidden}.gist-header_button{padding:.625rem .9376rem;background:0 0;color:unset;border:0;font-weight:700;opacity:.5;cursor:pointer;transition:.3s ease all;font-size:.8125rem}.gist-header_button-active{opacity:1}
